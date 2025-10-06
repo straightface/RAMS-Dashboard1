@@ -9,9 +9,10 @@ services:
   - type: web
     name: rams-frontend
     env: static
-    rootDir: frontend
+    rootDir: backend
     buildCommand: "yarn install && yarn build"
     staticPublishPath: "build"
     envVars:
       - key: REACT_APP_API_URL
         value: https://rams-api.onrender.com
+
