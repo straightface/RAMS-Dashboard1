@@ -1,18 +1,19 @@
 services:
   - type: web
     name: rams-backend
-    env: docker
-    plan: free
-    region: frankfurt
-    startCommand: "uvicorn backend.main:app --host 0.0.0.0 --port 8000"
+    env: python
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 8000"
 
   - type: web
     name: rams-frontend
     env: static
-    rootDir: backend
+    rootDir: frontend
     buildCommand: "yarn install && yarn build"
     staticPublishPath: "build"
     envVars:
       - key: REACT_APP_API_URL
         value: https://rams-api.onrender.com
+
 
