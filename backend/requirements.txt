@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+passlib[bcrypt]
+pyjwt
+pydantic
+python-dotenv
+openpyxl
+pandas
