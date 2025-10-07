@@ -3,14 +3,21 @@ services:
     name: rams-webapp
     env: python
     plan: free
-   buildCommand: |
-  echo "---- Building Frontend ----"
-  cd frontend && yarn install && yarn build
+buildCommand: |
+  echo "---- Installing Frontend ----"
+  if [ -d frontend ]; then
+    cd frontend
+    npm install -g yarn
+    yarn install
+    yarn build
+    cd ..
+    echo "---- Frontend build complete ----"
+  else
+    echo "No frontend folder found, skipping..."
+  fi
   echo "---- Installing Backend ----"
   pip install -r backend/requirements.txt
-    envVars:
-      - key: JWT_SECRET
-        value: change_me_securely
+
 
 
 
