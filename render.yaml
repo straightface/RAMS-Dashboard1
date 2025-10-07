@@ -3,13 +3,15 @@ services:
     name: rams-webapp
     env: python
     plan: free
-    buildCommand: |
-      cd frontend && yarn install && yarn build
-      pip install -r requirements.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port 8000
+   buildCommand: |
+  echo "---- Building Frontend ----"
+  cd frontend && yarn install && yarn build
+  echo "---- Installing Backend ----"
+  pip install -r backend/requirements.txt
     envVars:
       - key: JWT_SECRET
         value: change_me_securely
+
 
 
 
