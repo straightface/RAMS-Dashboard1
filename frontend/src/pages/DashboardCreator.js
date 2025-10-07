@@ -1,1 +1,1 @@
-import React from 'react';export default()=> <div style={{padding:20}}>Creator Dashboard</div>;
+import React from 'react';export default ()=> <div style={{padding:20}}>Creator Dashboard</div>;

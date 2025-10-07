@@ -11,7 +11,7 @@ def hash_password(password: str) -> str:
     return pwd_ctx.hash(password)
 
 def verify_password(plain: str, hashed: str) -> bool:
-    if hashed.startswith('PLAINTEXT:'):
+    if isinstance(hashed, str) and hashed.startswith('PLAINTEXT:'):
         return plain == hashed.split('PLAINTEXT:',1)[1]
     return pwd_ctx.verify(plain, hashed)
 

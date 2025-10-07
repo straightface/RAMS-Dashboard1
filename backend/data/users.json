@@ -1,7 +1,7 @@
 [
   {
     "username": "admin1",
-    "password": "$2b$12$V6aNO.xw8r8wEIFHEEPCWegbKVg6b9vHRX0r0y4rmOkudONaYGq42",
+    "password": "$2b$12$kTDKNfg9pOKSRr50qp.AcOTESbMV5ACYGCyQ5aHgpR20gXM5sX.ne",
     "roles": [
       "admin",
       "approver"
@@ -9,14 +9,14 @@
   },
   {
     "username": "approver1",
-    "password": "$2b$12$ujRQnws7n7y0kjNdc9yMFeLZDZAoxMx7Sz/75QhdQAkKoG.jdSaP6",
+    "password": "$2b$12$aSNxk5ihIetawLkzmB8kI.vs.LUJ8ltcRJ0MRsptIfd1hn53BjP6q",
     "roles": [
       "approver"
     ]
   },
   {
     "username": "creator1",
-    "password": "$2b$12$hILuA/qkM2lzUJyxDHfgrenvDgYeYipGfnDJ6xQAPIb.uc59RPGja",
+    "password": "$2b$12$U6D0CBaicyCNXRWpGzNoceRf3z7/..at0sNMWsZa/pPI65S9UlKIm",
     "roles": [
       "creator"
     ]
